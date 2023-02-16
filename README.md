@@ -1,2 +1,2 @@
-# python_practices
-All my python learning is stored here
+# python_practice
+Here all the practices carried out in python are stored
