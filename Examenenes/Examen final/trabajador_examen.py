@@ -1,4 +1,4 @@
-#Examen final Brayan Araya Rojas
+
 #Haga un programa en Python que sea amigable que calcule el salario de N empleados .
 
 print("Este programa calcula el salario de empleados.","\n")
