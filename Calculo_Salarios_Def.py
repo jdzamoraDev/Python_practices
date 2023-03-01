@@ -57,34 +57,43 @@ def calc_deducciones(salario_base, dedicacion_exclusiva, anualidad):
 
 
 def tecla():
-    input("Presione una tecla para continuar")
-
+    import sys
+    opcion = int(input("Desea ejecutar el codigo otra vez?: 1-Si 2-No   "))
+    if (opcion == 1):
+        menu()
+    elif (opcion != 1):
+        input("Presione una tecla para confirmar...")
+        sys.exit()
+        
 
 # def principal
-print("\nSistema Calculadora Salarial\n")
-print("Primero seleccione su puesto en la empresa")
-print("1	Gerente	                2.300.000")
-print("2	Director Área	        1.700.000")
-print("3	Contadores	        650.000")
-print("4	Auditoria	        850.000")
-print("5	Asistente Admin 	350.000\n")
-categoria = leer()
-salario_base = definir_salario_base(categoria)
-dedicacion_exclusiva = calc_dedicacion_exclusiva(salario_base, categoria)
-print("\nDigite la cantidad de años trabajados")
-allos = leer()
-anualidad = calc_anualidades(allos)
-calc_deducciones(salario_base, dedicacion_exclusiva, anualidad)
-ccss, seguro_vida, ahorro, hacienda, salario_bruto = calc_deducciones(
-    salario_base, dedicacion_exclusiva, anualidad)
-print("\nBoucher de salario\n")
-print(f'Categoria = {categoria}')
-print(f'Salario base = {salario_base}')
-print(f'Dedicacion exclusiva = {dedicacion_exclusiva}')
-print(f'Anualidad = {anualidad}\n')
-print(f'Rebajo CCSS = {ccss}')
-print(f'Seguro de vida = {seguro_vida}')
-print(f'Ahorro = {ahorro}')
-print(f'Hacienda = {hacienda}')
-print(f'Salario_bruto = {salario_bruto}\n')
-tecla()
+def menu():
+    print("\nSistema Calculadora Salarial\n")
+    print("Primero seleccione su puesto en la empresa")
+    print("1	Gerente	                2.300.000")
+    print("2	Director Área	        1.700.000")
+    print("3	Contadores	        650.000")
+    print("4	Auditoria	        850.000")
+    print("5	Asistente Admin 	350.000\n")
+    categoria = leer()
+    salario_base = definir_salario_base(categoria)
+    dedicacion_exclusiva = calc_dedicacion_exclusiva(salario_base, categoria)
+    print("\nDigite la cantidad de años trabajados")
+    allos = leer()
+    anualidad = calc_anualidades(allos)
+    calc_deducciones(salario_base, dedicacion_exclusiva, anualidad)
+    ccss, seguro_vida, ahorro, hacienda, salario_bruto = calc_deducciones(
+        salario_base, dedicacion_exclusiva, anualidad)
+    print("\nBoucher de salario\n")
+    print(f'Categoria = {categoria}')
+    print(f'Salario base = {salario_base}')
+    print(f'Dedicacion exclusiva = {dedicacion_exclusiva}')
+    print(f'Anualidad = {anualidad}\n')
+    print(f'Rebajo CCSS = {ccss}')
+    print(f'Seguro de vida = {seguro_vida}')
+    print(f'Ahorro = {ahorro}')
+    print(f'Hacienda = {hacienda}')
+    print(f'Salario_bruto = {salario_bruto}\n')
+    tecla()
+
+
